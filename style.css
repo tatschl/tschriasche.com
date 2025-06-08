@@ -17,15 +17,15 @@ body {
 .image-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Füllt gesamten sichtbaren Bildschirm */
+  max-width: 100vw;
+  height: 100%;
   overflow: hidden;
 }
 
-/* Bild mit Zoom-Effekt */
+/* Bild */
 .image-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Zoom ohne Verzerren */
+  height: auto;
   display: block;
 }
 

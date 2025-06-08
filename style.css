@@ -1,20 +1,24 @@
-/* Reset */
-* {
+/* Grundlayout */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100%;
+  font-family: sans-serif;
 }
 
-html, body {
-  min-height: 100vh;
-  font-family: sans-serif;
-  background-color: black; /* optional: kein Weiß sichtbar, wenn Bild nicht 100% deckt */
+/* Body so einstellen, dass kein zusätzlicher Raum entsteht */
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* Bildcontainer */
 .image-container {
   position: relative;
   width: 100%;
+  max-width: 100vw;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -25,7 +29,7 @@ html, body {
   display: block;
 }
 
-/* Overlay-Text */
+/* Text über dem Bild */
 .overlay-text {
   position: absolute;
   top: 15%;
@@ -41,7 +45,7 @@ html, body {
   word-break: break-word;
 }
 
-/* Mobile Optimierung */
+/* Extra mobile Optimierung */
 @media (max-width: 400px) {
   .overlay-text {
     font-size: 8vw;

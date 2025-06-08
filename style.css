@@ -1,32 +1,35 @@
-/* Reset */
-* {
+/* Grundlayout */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
   height: 100%;
   font-family: sans-serif;
 }
 
-/* Container auf ganze Höhe */
+/* Body so einstellen, dass kein zusätzlicher Raum entsteht */
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Bildcontainer */
 .image-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* 100% der sichtbaren Höhe */
+  height: 100vh; /* Füllt gesamten sichtbaren Bildschirm */
   overflow: hidden;
 }
 
-/* Bild füllt alles aus, wird bei Bedarf gezoomt */
+/* Bild mit Zoom-Effekt */
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* wichtig: zoomt das Bild ohne Verzerrung */
+  object-fit: cover;  /* Zoom ohne Verzerren */
   display: block;
 }
 
-/* Text proportional und responsive */
+/* Text über dem Bild */
 .overlay-text {
   position: absolute;
   top: 15%;
@@ -35,10 +38,11 @@ html, body {
   color: white;
   font-size: 6vw;
   font-weight: bold;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
   text-align: center;
   padding: 0 5vw;
   line-height: 1.2;
+  word-break: break-word;
 }
 
 /* Extra mobile Optimierung */
